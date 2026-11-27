@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1 - Internet and HTML | WebNotes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>WebNotes</h2>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<main class="container">
+
+<h1>Chapter 1: Internet and HTML</h1>
+<p>Complete study notes based on Punjabi University Web Development syllabus.</p>
+
+<section class="card">
+<h2>1. Internet and World Wide Web</h2>
+
+<h3>1.1 Introduction to Internet</h3>
+<p>The Internet is a worldwide network of interconnected computer networks. It allows computers and devices to communicate and exchange information using standard communication protocols.</p>
+
+<h3>1.2 Internet Addressing</h3>
+<p>Internet addressing is the process of identifying devices and resources connected to the Internet.</p>
+<ul>
+<li><b>IP Address:</b> A numerical address that identifies a device on a network.</li>
+<li><b>IPv4:</b> Uses a 32-bit address, such as 192.168.1.1.</li>
+<li><b>IPv6:</b> Uses a 128-bit address to support a much larger number of devices.</li>
+<li><b>Domain Name:</b> A human-readable website name, such as example.com.</li>
+</ul>
+
+<h3>1.3 ISP (Internet Service Provider)</h3>
+<p>An ISP is an organization or company that provides Internet access to users. It may also provide email, web hosting and other Internet services.</p>
+
+<h3>1.4 Types of Internet Connections</h3>
+<ul>
+<li><b>Dial-up:</b> Uses a telephone line and modem to connect to the Internet.</li>
+<li><b>DSL:</b> Provides Internet through telephone lines.</li>
+<li><b>Cable:</b> Uses cable television infrastructure.</li>
+<li><b>Fiber Optic:</b> Uses optical fibers to provide high-speed Internet.</li>
+<li><b>Satellite:</b> Uses communication satellites to provide connectivity.</li>
+<li><b>Mobile Broadband:</b> Uses cellular networks such as 4G and 5G.</li>
+</ul>
+
+<h3>1.5 Introduction to WWW</h3>
+<p>WWW stands for World Wide Web. It is a collection of interconnected web pages and resources that can be accessed through the Internet using a web browser.</p>
+
+<h3>1.6 Web Browser</h3>
+<p>A web browser is application software used to access, retrieve and display web pages. Examples include Google Chrome, Mozilla Firefox, Microsoft Edge and Safari.</p>
+
+<h3>1.7 Web Server</h3>
+<p>A web server is a computer or software that stores website files and delivers web pages to browsers when requested.</p>
+
+<h3>1.8 URL Structure</h3>
+<p>URL stands for Uniform Resource Locator. It is the address used to locate a resource on the Internet.</p>
+<pre><code>https://www.example.com/about.html</code></pre>
+<ul>
+<li><b>https:</b> Protocol or scheme.</li>
+<li><b>www:</b> Subdomain.</li>
+<li><b>example.com:</b> Domain name.</li>
+<li><b>about.html:</b> Resource path.</li>
+</ul>
+
+<h3>1.9 HTTP and HTTPS</h3>
+<p>HTTP stands for HyperText Transfer Protocol. It is used for communication between web browsers and web servers.</p>
+<p>HTTPS is the secure version of HTTP. It uses encryption to protect data exchanged between a browser and a server.</p>
+
+<h3>1.10 DNS (Domain Name System)</h3>
+<p>DNS translates human-readable domain names into IP addresses so that computers can locate the correct servers on the Internet.</p>
+
+<h3>1.11 Web Applications</h3>
+<p>A web application is software that runs through a web browser and allows users to perform tasks online. Examples include online email services, document editors and banking applications.</p>
+
+<h3>1.12 Tools for Website Creation</h3>
+<ul>
+<li><b>Text Editors:</b> Used to write HTML, CSS and JavaScript code. Example: Visual Studio Code.</li>
+<li><b>Web Browsers:</b> Used to view and test websites.</li>
+<li><b>Developer Tools:</b> Used to inspect and debug webpages.</li>
+<li><b>Image Editors:</b> Used to prepare images and graphics for websites.</li>
+<li><b>Local Servers:</b> Used to test websites on a local computer.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>2. HTML Basics</h2>
+
+<h3>2.1 Introduction to HTML</h3>
+<p>HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure web pages.</p>
+
+<h3>2.2 HTML Structure and Syntax</h3>
+<p>An HTML document contains elements written using tags. Most elements have an opening tag, content and a closing tag.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;Welcome to HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h3>2.3 HTML Document Structure</h3>
+<ul>
+<li><b>DOCTYPE:</b> Declares the document as HTML5.</li>
+<li><b>html:</b> Root element of the document.</li>
+<li><b>head:</b> Contains metadata and page information.</li>
+<li><b>title:</b> Defines the browser tab title.</li>
+<li><b>body:</b> Contains the visible webpage content.</li>
+</ul>
+
+<h3>2.4 HTML Elements and Tags</h3>
+<p>A tag is a keyword written inside angle brackets. An element generally includes an opening tag, content and a closing tag.</p>
+<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+<h3>2.5 HTML Attributes</h3>
+<p>Attributes provide additional information about HTML elements. They are written inside the opening tag.</p>
+<pre><code>&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;</code></pre>
+<p>Here, href is an attribute that specifies the link destination.</p>
+
+<h3>2.6 HTML Comments</h3>
+<p>Comments are notes written in source code. They are not displayed on the webpage.</p>
+<pre><code>&lt;!-- This is an HTML comment --&gt;</code></pre>
+
+<h3>2.7 Character Entities and Special Symbols</h3>
+<p>HTML entities are used to display reserved characters and special symbols.</p>
+<ul>
+<li><b>&amp;lt;</b> displays less-than (&lt;).</li>
+<li><b>&amp;gt;</b> displays greater-than (&gt;).</li>
+<li><b>&amp;amp;</b> displays ampersand (&amp;).</li>
+<li><b>&amp;nbsp;</b> represents a non-breaking space.</li>
+<li><b>&amp;copy;</b> displays copyright (©).</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>3. Text and Lists</h2>
+
+<h3>3.1 Headings and Subheadings</h3>
+<p>HTML provides six heading levels, from h1 to h6. The h1 element represents the highest-level heading, while h6 represents the lowest-level heading.</p>
+<pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;</code></pre>
+
+<h3>3.2 Paragraphs and Line Breaks</h3>
+<p>The p tag creates a paragraph. The br tag inserts a line break.</p>
+<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+First Line&lt;br&gt;
+Second Line</code></pre>
+
+<h3>3.3 Text Formatting Tags</h3>
+<ul>
+<li><b>strong:</b> Indicates important text.</li>
+<li><b>em:</b> Indicates emphasized text.</li>
+<li><b>b:</b> Displays bold text.</li>
+<li><b>i:</b> Displays italic text.</li>
+<li><b>u:</b> Underlines text.</li>
+<li><b>mark:</b> Highlights text.</li>
+<li><b>small:</b> Displays smaller text.</li>
+<li><b>del:</b> Represents deleted text.</li>
+<li><b>sup:</b> Displays superscript text.</li>
+<li><b>sub:</b> Displays subscript text.</li>
+</ul>
+
+<h3>3.4 Ordered Lists</h3>
+<p>An ordered list displays items in a numbered or ordered sequence. It uses ol and li tags.</p>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+<h3>3.5 Unordered Lists</h3>
+<p>An unordered list displays items with bullets. It uses ul and li tags.</p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Mango&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h3>3.6 Definition Lists</h3>
+<p>A definition list displays terms and their descriptions. It uses dl, dt and dd tags.</p>
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Markup language for web pages.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+<h3>3.7 Nested Lists</h3>
+<p>A nested list is a list placed inside another list item. It is useful for displaying subcategories.</p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;Programming
+        &lt;ul&gt;
+            &lt;li&gt;C&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h3>3.8 Organizing Content with Proper Structure</h3>
+<p>HTML provides semantic elements that help organize webpage content meaningfully.</p>
+<ul>
+<li><b>header:</b> Introductory content or page heading.</li>
+<li><b>nav:</b> Navigation links.</li>
+<li><b>main:</b> Main content of the page.</li>
+<li><b>section:</b> A thematic group of content.</li>
+<li><b>article:</b> Independent content.</li>
+<li><b>footer:</b> Footer information.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>4. Links and Graphics</h2>
+
+<h3>4.1 Creating Hyperlinks</h3>
+<p>Hyperlinks allow users to navigate from one webpage or resource to another. The a tag creates hyperlinks.</p>
+<pre><code>&lt;a href="https://example.com"&gt;
+Visit Example
+&lt;/a&gt;</code></pre>
+
+<h3>4.2 Absolute URLs</h3>
+<p>An absolute URL contains the complete address of a resource, including its protocol and domain name.</p>
+<pre><code>https://www.example.com/about.html</code></pre>
+
+<h3>4.3 Relative URLs</h3>
+<p>A relative URL specifies a resource location relative to the current webpage or document.</p>
+<pre><code>about.html
+images/photo.jpg</code></pre>
+
+<h3>4.4 Anchor Links</h3>
+<p>Anchor links navigate to a particular section of the same page or another page using an element ID.</p>
+<pre><code>&lt;a href="#contact"&gt;Go to Contact&lt;/a&gt;
+
+&lt;h2 id="contact"&gt;Contact Us&lt;/h2&gt;</code></pre>
+
+<h3>4.5 Adding Images to HTML Pages</h3>
+<p>The img tag is used to add images to a webpage. It is a void element and does not require a closing tag.</p>
+<pre><code>&lt;img src="photo.jpg"
+     alt="A sample photo"
+     width="300"&gt;</code></pre>
+
+<h3>4.6 Image Attributes</h3>
+<ul>
+<li><b>src:</b> Specifies the image location.</li>
+<li><b>alt:</b> Provides alternative text.</li>
+<li><b>width:</b> Specifies image width.</li>
+<li><b>height:</b> Specifies image height.</li>
+</ul>
+
+<h3>4.7 Image Formats</h3>
+<ul>
+<li><b>JPEG/JPG:</b> Commonly used for photographs.</li>
+<li><b>PNG:</b> Supports transparency and lossless compression.</li>
+<li><b>GIF:</b> Supports simple animations.</li>
+<li><b>SVG:</b> Vector format that scales without losing quality.</li>
+<li><b>WebP:</b> Modern format offering efficient image compression.</li>
+</ul>
+
+<h3>4.8 Figure and Figcaption</h3>
+<p>The figure element groups media content, while figcaption provides a caption or description.</p>
+<pre><code>&lt;figure&gt;
+    &lt;img src="flower.jpg" alt="Flower"&gt;
+    &lt;figcaption&gt;A beautiful flower&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+<h3>4.9 Image Maps</h3>
+<p>An image map allows different areas of a single image to act as separate clickable links. It uses map and area elements.</p>
+<pre><code>&lt;img src="workplace.jpg"
+     usemap="#mymap"
+     alt="Workplace"&gt;
+
+&lt;map name="mymap"&gt;
+    &lt;area shape="rect"
+          coords="20,20,150,100"
+          href="page.html"
+          alt="Open page"&gt;
+&lt;/map&gt;</code></pre>
+</section>
+<section class="card">
+<h2>5. Tables in HTML</h2>
+
+<h3>5.1 Introduction to HTML Tables</h3>
+<p>HTML tables are used to organize and display data in rows and columns. They are useful for presenting information such as student records, marksheets and timetables.</p>
+
+<h3>5.2 Table Structure</h3>
+<p>The main HTML table elements are:</p>
+<ul>
+<li><b>table:</b> Creates the table.</li>
+<li><b>tr:</b> Defines a table row.</li>
+<li><b>th:</b> Defines a heading cell.</li>
+<li><b>td:</b> Defines a normal data cell.</li>
+</ul>
+
+<h3>5.3 Creating a Table</h3>
+<pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Marks&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Aman&lt;/td&gt;
+        &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Rahul&lt;/td&gt;
+        &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>5.4 Spanning Cells</h3>
+<p>Cell spanning allows a table cell to occupy more than one row or column.</p>
+
+<p><b>Colspan:</b> Combines multiple columns into one cell.</p>
+<pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Student Details&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Name&lt;/td&gt;
+        &lt;td&gt;Aman&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<p><b>Rowspan:</b> Combines multiple rows into one cell.</p>
+<pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;CSE&lt;/td&gt;
+        &lt;td&gt;HTML&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;CSS&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<h3>5.5 Table Headers and Captions</h3>
+<p>The caption element provides a title or description for a table. The thead, tbody and tfoot elements organize the header, body and footer sections.</p>
+<pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Student Marks&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Marks&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Aman&lt;/td&gt;
+            &lt;td&gt;85&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</section>
+
+<section class="card">
+<h2>6. HTML Forms</h2>
+
+<h3>6.1 Introduction to Forms</h3>
+<p>HTML forms are used to collect information from users. They allow users to enter data such as names, email addresses, passwords and feedback.</p>
+
+<h3>6.2 Creating a Form</h3>
+<p>The form element defines an HTML form. The action attribute specifies where the submitted data is sent, and the method attribute specifies how it is sent.</p>
+<pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>6.3 Form Input Types</h3>
+<p>The input element allows users to enter different types of data.</p>
+<ul>
+<li><b>text:</b> Accepts ordinary text.</li>
+<li><b>password:</b> Accepts a password.</li>
+<li><b>email:</b> Accepts an email address.</li>
+<li><b>number:</b> Accepts numeric input.</li>
+<li><b>radio:</b> Allows selection of one option from a group.</li>
+<li><b>checkbox:</b> Allows selection of multiple options.</li>
+<li><b>date:</b> Allows selection of a date.</li>
+<li><b>file:</b> Allows a user to select a file.</li>
+<li><b>submit:</b> Creates a form submission button.</li>
+<li><b>reset:</b> Resets form fields to their initial values.</li>
+</ul>
+
+<h3>6.4 Textarea and Select</h3>
+<p>The textarea element provides a multi-line text input. The select element creates a dropdown list.</p>
+<pre><code>&lt;textarea rows="4" cols="30"&gt;
+Enter your message
+&lt;/textarea&gt;
+
+&lt;select&gt;
+    &lt;option&gt;CSE&lt;/option&gt;
+    &lt;option&gt;ECE&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+<h3>6.5 Form Validation</h3>
+<p>Form validation checks whether the information entered by a user meets specified requirements before submission.</p>
+<p>HTML provides built-in validation attributes such as required, minlength, maxlength, min, max and pattern.</p>
+<pre><code>&lt;form&gt;
+    &lt;input type="email"
+           required
+           placeholder="Enter email"&gt;
+
+    &lt;input type="text"
+           minlength="3"
+           required
+           placeholder="Enter name"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>6.6 Form Buttons</h3>
+<ul>
+<li><b>Submit Button:</b> Submits the form data.</li>
+<li><b>Reset Button:</b> Resets the form fields.</li>
+<li><b>Button:</b> Creates a general-purpose clickable button.</li>
+</ul>
+<pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+&lt;button type="button"&gt;Click Me&lt;/button&gt;</code></pre>
+</section>
+
+<section class="card">
+<h2>7. Frames and Multimedia</h2>
+
+<h3>7.1 Introduction to Frames</h3>
+<p>Frames were traditionally used to divide a browser window into separate sections, with each section displaying a different HTML document. The old frameset and frame elements are obsolete in HTML5.</p>
+
+<h3>7.2 Introduction to Iframes</h3>
+<p>An iframe (Inline Frame) is used to embed another webpage or external content inside the current HTML document.</p>
+<pre><code>&lt;iframe
+    src="https://example.com"
+    width="500"
+    height="300"
+    title="Example Website"&gt;
+&lt;/iframe&gt;</code></pre>
+
+<h3>7.3 Embedding External Content</h3>
+<p>External content can be displayed inside a webpage using an iframe, subject to the external website's security and embedding permissions.</p>
+
+<h3>7.4 Adding Audio to HTML</h3>
+<p>The audio element is used to add sound files to a webpage. The controls attribute displays playback controls such as play, pause and volume.</p>
+<pre><code>&lt;audio controls&gt;
+    &lt;source src="music.mp3" type="audio/mpeg"&gt;
+    Your browser does not support audio.
+&lt;/audio&gt;</code></pre>
+
+<h3>7.5 Adding Video to HTML</h3>
+<p>The video element is used to display video files on a webpage.</p>
+<pre><code>&lt;video width="500" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support video.
+&lt;/video&gt;</code></pre>
+
+<h3>7.6 Multimedia Controls</h3>
+<p>HTML provides attributes to control multimedia playback.</p>
+<ul>
+<li><b>controls:</b> Displays playback controls.</li>
+<li><b>autoplay:</b> Requests automatic playback.</li>
+<li><b>loop:</b> Repeats the media after it ends.</li>
+<li><b>muted:</b> Starts the media without sound.</li>
+<li><b>poster:</b> Specifies a preview image for a video.</li>
+<li><b>preload:</b> Gives the browser a hint about loading media.</li>
+</ul>
+
+<h3>7.7 Source Elements for Multiple Formats</h3>
+<p>The source element allows multiple media formats to be provided. The browser can select a format it supports.</p>
+<pre><code>&lt;video controls width="400"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.webm" type="video/webm"&gt;
+    Your browser does not support video.
+&lt;/video&gt;</code></pre>
+
+<h3>7.8 Embedding YouTube Videos</h3>
+<p>YouTube videos can be embedded into webpages using an iframe. The video ID is included in the embed URL.</p>
+<pre><code>&lt;iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video"
+    allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+<p>Replace VIDEO_ID with the actual ID of the YouTube video. The video owner's embedding settings must allow embedding.</p>
+</section>
+
+<section class="card">
+<h2>8. Important Exam Points</h2>
+<ul>
+<li>Internet is a global network of interconnected networks.</li>
+<li>WWW stands for World Wide Web.</li>
+<li>ISP stands for Internet Service Provider.</li>
+<li>DNS converts domain names into IP addresses.</li>
+<li>HTML stands for HyperText Markup Language.</li>
+<li>DOCTYPE declares the HTML document type.</li>
+<li>HTML comments are not displayed in the browser.</li>
+<li>Ordered lists use ol and unordered lists use ul.</li>
+<li>Hyperlinks are created using the a tag.</li>
+<li>Tables use table, tr, th and td elements.</li>
+<li>Forms collect information from users.</li>
+<li>Iframe embeds external content.</li>
+<li>Audio and video elements add multimedia to webpages.</li>
+</ul>
+</section>
+</main>
+</body>
+</html>

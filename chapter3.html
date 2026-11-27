@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3 - XML | WebNotes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+<h2>WebNotes</h2>
+<a href="index.html">← Back to Home</a>
+</header>
+
+<main class="container">
+<h1>Chapter 3: XML (Extensible Markup Language)</h1>
+<p>Detailed notes based on Punjabi University Web Development syllabus.</p>
+
+<section class="card">
+<h2>1. Introduction to XML</h2>
+<h3>1.1 What is XML?</h3>
+<p>XML stands for Extensible Markup Language. It is a markup language used to store, organize and transport data in a structured format.</p>
+<p>XML allows users to create their own tags to describe the information stored in a document.</p>
+
+<h3>1.2 Features of XML</h3>
+<ul>
+<li>XML is extensible because users can create custom tags.</li>
+<li>It is platform independent.</li>
+<li>It stores data in a structured format.</li>
+<li>It is both human-readable and machine-readable.</li>
+<li>It is case-sensitive.</li>
+<li>It separates data from presentation.</li>
+</ul>
+
+<h3>1.3 Uses of XML</h3>
+<ul>
+<li>Data storage and transportation.</li>
+<li>Sharing information between different applications.</li>
+<li>Configuration files.</li>
+<li>Web services and data exchange.</li>
+<li>Storing structured information.</li>
+</ul>
+
+<h3>1.4 XML Example</h3>
+<pre><code>&lt;student&gt;
+    &lt;name&gt;Rahul&lt;/name&gt;
+    &lt;rollno&gt;101&lt;/rollno&gt;
+    &lt;course&gt;B.Tech CSE&lt;/course&gt;
+&lt;/student&gt;</code></pre>
+<p>This example stores student information using meaningful custom tags.</p>
+</section>
+
+<section class="card">
+<h2>2. XML Syntax and Structure</h2>
+
+<h3>2.1 Basic XML Structure</h3>
+<p>An XML document contains elements arranged in a hierarchical structure. It generally has one root element containing all other elements.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;college&gt;
+    &lt;student&gt;
+        &lt;name&gt;Aman&lt;/name&gt;
+        &lt;department&gt;Computer Science&lt;/department&gt;
+    &lt;/student&gt;
+&lt;/college&gt;</code></pre>
+
+<h3>2.2 XML Elements</h3>
+<p>Elements are the basic building blocks of an XML document. An element generally consists of an opening tag, content and a closing tag.</p>
+<pre><code>&lt;name&gt;Aman&lt;/name&gt;</code></pre>
+
+<h3>2.3 XML Attributes</h3>
+<p>Attributes provide additional information about an element. They are written inside the opening tag.</p>
+<pre><code>&lt;student id="101"&gt;
+    &lt;name&gt;Aman&lt;/name&gt;
+&lt;/student&gt;</code></pre>
+
+<h3>2.4 Difference Between Elements and Attributes</h3>
+<ul>
+<li>Elements contain data or other elements.</li>
+<li>Attributes provide additional information about an element.</li>
+<li>Elements use opening and closing tags, while attributes are written inside a tag.</li>
+</ul>
+
+<h3>2.5 XML Comments</h3>
+<p>Comments are used to explain XML code and are ignored by the XML parser.</p>
+<pre><code>&lt;!-- This is an XML comment --&gt;</code></pre>
+</section>
+
+<section class="card">
+<h2>3. Well-Formed XML Documents</h2>
+<p>A well-formed XML document follows all the basic syntax rules of XML.</p>
+
+<h3>3.1 Rules of Well-Formed XML</h3>
+<ol>
+<li>An XML document must contain exactly one root element.</li>
+<li>Every opening tag must have a matching closing tag, except empty elements.</li>
+<li>Elements must be properly nested.</li>
+<li>XML tags are case-sensitive.</li>
+<li>Attribute values must be enclosed in quotation marks.</li>
+<li>Special characters must be written using valid XML entities when required.</li>
+</ol>
+
+<h3>3.2 Correct XML Example</h3>
+<pre><code>&lt;book&gt;
+    &lt;title&gt;Web Development&lt;/title&gt;
+    &lt;author&gt;Aman&lt;/author&gt;
+&lt;/book&gt;</code></pre>
+
+<h3>3.3 Incorrect XML Example</h3>
+<pre><code>&lt;book&gt;
+    &lt;title&gt;Web Development&lt;/author&gt;
+&lt;/book&gt;</code></pre>
+<p>The incorrect example has mismatched tags and is not well-formed.</p>
+</section>
+
+<section class="card">
+<h2>4. XML Declaration and Namespaces</h2>
+
+<h3>4.1 XML Declaration</h3>
+<p>The XML declaration specifies information about the XML document, such as its version and character encoding. It is generally written at the beginning of the document.</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+
+<h3>4.2 Important Parts</h3>
+<ul>
+<li><b>version:</b> Specifies the XML version.</li>
+<li><b>encoding:</b> Specifies the character encoding used by the document.</li>
+</ul>
+
+<h3>4.3 XML Namespaces</h3>
+<p>XML namespaces are used to avoid naming conflicts between elements that have the same name but different meanings.</p>
+<p>A namespace is commonly declared using the xmlns attribute.</p>
+
+<pre><code>&lt;root xmlns:info="https://example.com/info"&gt;
+    &lt;info:name&gt;Aman&lt;/info:name&gt;
+&lt;/root&gt;</code></pre>
+
+<h3>4.4 Advantages of Namespaces</h3>
+<ul>
+<li>Prevent naming conflicts.</li>
+<li>Identify the vocabulary to which an element belongs.</li>
+<li>Allow different XML vocabularies to be combined.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>5. Document Type Definition (DTD)</h2>
+
+<h3>5.1 What is DTD?</h3>
+<p>DTD stands for Document Type Definition. It defines the legal structure and elements of an XML document. It specifies which elements and attributes are allowed and how they are arranged.</p>
+
+<h3>5.2 Types of DTD</h3>
+<ul>
+<li><b>Internal DTD:</b> Defined inside the XML document.</li>
+<li><b>External DTD:</b> Defined in a separate file and linked to the XML document.</li>
+</ul>
+
+<h3>5.3 Internal DTD Example</h3>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE student [
+    &lt;!ELEMENT student (name, rollno)&gt;
+    &lt;!ELEMENT name (#PCDATA)&gt;
+    &lt;!ELEMENT rollno (#PCDATA)&gt;
+]&gt;
+
+&lt;student&gt;
+    &lt;name&gt;Aman&lt;/name&gt;
+    &lt;rollno&gt;101&lt;/rollno&gt;
+&lt;/student&gt;</code></pre>
+
+<h3>5.4 External DTD Example</h3>
+<p>XML document:</p>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE student SYSTEM "student.dtd"&gt;
+
+&lt;student&gt;
+    &lt;name&gt;Aman&lt;/name&gt;
+    &lt;rollno&gt;101&lt;/rollno&gt;
+&lt;/student&gt;</code></pre>
+
+<p>External file named student.dtd:</p>
+<pre><code>&lt;!ELEMENT student (name, rollno)&gt;
+&lt;!ELEMENT name (#PCDATA)&gt;
+&lt;!ELEMENT rollno (#PCDATA)&gt;</code></pre>
+
+<h3>5.5 Important DTD Declarations</h3>
+<ul>
+<li><b>ELEMENT:</b> Defines an XML element.</li>
+<li><b>ATTLIST:</b> Defines attributes for an element.</li>
+<li><b>PCDATA:</b> Represents parsed character data.</li>
+<li><b>DOCTYPE:</b> Declares the document type and its DTD.</li>
+</ul>
+
+<h3>5.6 Advantages of DTD</h3>
+<ul>
+<li>Defines the structure of XML documents.</li>
+<li>Helps maintain consistency.</li>
+<li>Allows validation against declared rules.</li>
+<li>Supports data exchange between applications.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>6. XML Important Exam Questions</h2>
+<h3>Short Answer Questions</h3>
+<ol>
+<li>Define XML.</li>
+<li>Write any four features of XML.</li>
+<li>What are XML elements?</li>
+<li>What are XML attributes?</li>
+<li>Define a well-formed XML document.</li>
+<li>What is an XML declaration?</li>
+<li>What are XML namespaces?</li>
+<li>Define DTD.</li>
+<li>Differentiate between internal and external DTD.</li>
+</ol>
+
+<h3>Long Answer Questions</h3>
+<ol>
+<li>Explain XML and its features with an example.</li>
+<li>Explain XML syntax and structure.</li>
+<li>Explain the rules of well-formed XML documents.</li>
+<li>Explain XML declaration and namespaces.</li>
+<li>Explain DTD, its types and declarations with examples.</li>
+</ol>
+</section>
+</main>
+</body>
+</html>

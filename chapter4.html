@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4 - JavaScript | WebNotes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+<h2>WebNotes</h2>
+<a href="index.html">← Back to Home</a>
+</header>
+
+<main class="container">
+<h1>Chapter 4: JavaScript Fundamentals and DOM</h1>
+<p>Detailed notes based on Punjabi University Web Development syllabus.</p>
+
+<section class="card">
+<h2>1. Introduction to JavaScript</h2>
+
+<h3>1.1 What is JavaScript?</h3>
+<p>JavaScript is a high-level scripting language used to make web pages interactive and dynamic. It can change webpage content, respond to user actions, validate forms and perform calculations.</p>
+
+<h3>1.2 Features of JavaScript</h3>
+<ul>
+<li>Lightweight scripting language.</li>
+<li>Supports dynamic webpage content.</li>
+<li>Works with HTML and CSS.</li>
+<li>Supports event handling.</li>
+<li>Can manipulate the DOM.</li>
+<li>Runs in modern web browsers.</li>
+</ul>
+
+<h3>1.3 Uses of JavaScript</h3>
+<ul>
+<li>Form validation.</li>
+<li>Interactive buttons and menus.</li>
+<li>Dynamic content updates.</li>
+<li>Animations and effects.</li>
+<li>Calculations and data processing.</li>
+</ul>
+
+<h3>1.4 Adding JavaScript to HTML</h3>
+<p>JavaScript can be added to an HTML document using the script element.</p>
+
+<pre><code>&lt;script&gt;
+alert("Hello World");
+&lt;/script&gt;</code></pre>
+
+<p>JavaScript can also be placed in an external file.</p>
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+</section>
+
+<section class="card">
+<h2>2. JavaScript Variables and Data Types</h2>
+
+<h3>2.1 Variables</h3>
+<p>A variable is a named container used to store data in a program.</p>
+
+<p>JavaScript provides three commonly used ways to declare variables:</p>
+<ul>
+<li><b>var:</b> Older way of declaring a variable. It has function scope.</li>
+<li><b>let:</b> Declares a block-scoped variable that can be reassigned.</li>
+<li><b>const:</b> Declares a block-scoped variable that cannot be reassigned.</li>
+</ul>
+
+<pre><code>let name = "Aman";
+var age = 18;
+const college = "Punjabi University";</code></pre>
+
+<h3>2.2 JavaScript Data Types</h3>
+<p>Data types define the kind of value stored in a variable.</p>
+<ul>
+<li><b>String:</b> Text values.</li>
+<li><b>Number:</b> Numeric values.</li>
+<li><b>Boolean:</b> true or false values.</li>
+<li><b>Undefined:</b> A variable declared but not assigned a value.</li>
+<li><b>Null:</b> Represents an intentional absence of value.</li>
+<li><b>BigInt:</b> Represents very large integers.</li>
+<li><b>Symbol:</b> Represents unique identifiers.</li>
+<li><b>Object:</b> Stores collections of related data.</li>
+</ul>
+
+<pre><code>let student = "Aman";
+let marks = 85;
+let passed = true;
+let result;
+let data = null;</code></pre>
+
+<h3>2.3 Checking Data Types</h3>
+<p>The typeof operator is used to identify the data type of a value.</p>
+<pre><code>let age = 18;
+console.log(typeof age);
+
+let name = "Aman";
+console.log(typeof name);</code></pre>
+</section>
+
+<section class="card">
+<h2>3. Operators and Expressions</h2>
+
+<h3>3.1 What are Operators?</h3>
+<p>Operators are symbols used to perform operations on values and variables.</p>
+
+<h3>3.2 Arithmetic Operators</h3>
+<ul>
+<li>+ Addition</li>
+<li>- Subtraction</li>
+<li>* Multiplication</li>
+<li>/ Division</li>
+<li>% Modulus (remainder)</li>
+<li>** Exponentiation</li>
+<li>++ Increment</li>
+<li>-- Decrement</li>
+</ul>
+
+<pre><code>let a = 10;
+let b = 3;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);</code></pre>
+
+<h3>3.3 Assignment Operators</h3>
+<p>Assignment operators assign or update values in variables.</p>
+<pre><code>let x = 10;
+
+x += 5;
+x -= 2;
+x *= 2;
+x /= 2;</code></pre>
+
+<h3>3.4 Comparison Operators</h3>
+<ul>
+<li>== Equal value</li>
+<li>=== Equal value and type</li>
+<li>!= Not equal value</li>
+<li>!== Not equal value or type</li>
+<li>&gt; Greater than</li>
+<li>&lt; Less than</li>
+<li>&gt;= Greater than or equal to</li>
+<li>&lt;= Less than or equal to</li>
+</ul>
+
+<h3>3.5 Logical Operators</h3>
+<ul>
+<li>&amp;&amp; Logical AND</li>
+<li>|| Logical OR</li>
+<li>! Logical NOT</li>
+</ul>
+
+<h3>3.6 Expressions</h3>
+<p>An expression is a combination of values, variables and operators that produces a result.</p>
+<pre><code>let result = 10 + 20 * 2;</code></pre>
+</section>
+
+<section class="card">
+<h2>4. Control Structures</h2>
+
+<h3>4.1 Introduction</h3>
+<p>Control structures determine the order in which statements are executed in a program.</p>
+
+<h3>4.2 if Statement</h3>
+<p>The if statement executes a block of code when a condition is true.</p>
+<pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("Eligible");
+}</code></pre>
+
+<h3>4.3 if-else Statement</h3>
+<p>The if-else statement executes one block when the condition is true and another when it is false.</p>
+<pre><code>let marks = 45;
+
+if (marks >= 40) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}</code></pre>
+
+<h3>4.4 else-if Ladder</h3>
+<p>It is used to check multiple conditions one after another.</p>
+<pre><code>let marks = 75;
+
+if (marks >= 80) {
+    console.log("Grade A");
+} else if (marks >= 60) {
+    console.log("Grade B");
+} else {
+    console.log("Grade C");
+}</code></pre>
+
+<h3>4.5 switch Statement</h3>
+<p>The switch statement selects one block of code from multiple possible cases.</p>
+<pre><code>let day = 2;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    default:
+        console.log("Other Day");
+}</code></pre>
+</section>
+
+<section class="card">
+<h2>5. Loops in JavaScript</h2>
+
+<h3>5.1 Introduction</h3>
+<p>Loops are used to execute a block of code repeatedly while a condition is satisfied.</p>
+
+<h3>5.2 for Loop</h3>
+<p>The for loop is generally used when the number of repetitions is known.</p>
+<pre><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+
+<h3>5.3 while Loop</h3>
+<p>The while loop executes as long as its condition is true.</p>
+<pre><code>let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+
+<h3>5.4 do-while Loop</h3>
+<p>The do-while loop executes its block at least once before checking the condition.</p>
+<pre><code>let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);</code></pre>
+
+<h3>5.5 Difference Between Loops</h3>
+<ul>
+<li><b>for:</b> Best suited when the number of repetitions is known.</li>
+<li><b>while:</b> Checks the condition before executing the loop body.</li>
+<li><b>do-while:</b> Checks the condition after executing the loop body.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>6. Functions and Scope</h2>
+
+<h3>6.1 What is a Function?</h3>
+<p>A function is a reusable block of code designed to perform a particular task.</p>
+
+<h3>6.2 Function Declaration</h3>
+<pre><code>function greet() {
+    console.log("Hello Student");
+}
+
+greet();</code></pre>
+
+<h3>6.3 Parameters and Arguments</h3>
+<p>Parameters are variables listed in a function definition. Arguments are actual values passed when the function is called.</p>
+<pre><code>function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+console.log(result);</code></pre>
+
+<h3>6.4 Return Statement</h3>
+<p>The return statement sends a value back from a function.</p>
+
+<h3>6.5 Function Scope</h3>
+<p>Scope determines where a variable can be accessed in a program.</p>
+<ul>
+<li><b>Global scope:</b> A variable declared outside functions can generally be accessed throughout its accessible script.</li>
+<li><b>Function scope:</b> A variable declared with var inside a function is accessible within that function.</li>
+<li><b>Block scope:</b> Variables declared using let and const inside a block are accessible within that block.</li>
+</ul>
+
+<pre><code>let globalName = "Aman";
+
+function example() {
+    let localName = "Student";
+    console.log(globalName);
+    console.log(localName);
+}</code></pre>
+</section>
+
+<section class="card">
+<h2>7. Arrays and Objects</h2>
+
+<h3>7.1 Arrays</h3>
+<p>An array is a data structure used to store multiple values in a single variable. Array indexing starts from zero.</p>
+<pre><code>let fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits[0]);
+console.log(fruits.length);</code></pre>
+
+<h3>7.2 Common Array Methods</h3>
+<ul>
+<li><b>push():</b> Adds an element at the end.</li>
+<li><b>pop():</b> Removes the last element.</li>
+<li><b>shift():</b> Removes the first element.</li>
+<li><b>unshift():</b> Adds an element at the beginning.</li>
+<li><b>includes():</b> Checks whether a value exists.</li>
+</ul>
+
+<h3>7.3 Objects</h3>
+<p>An object stores related data in key-value pairs called properties. Objects can also contain functions called methods.</p>
+<pre><code>let student = {
+    name: "Aman",
+    age: 18,
+    course: "CSE"
+};
+
+console.log(student.name);
+console.log(student.course);</code></pre>
+</section>
+
+<section class="card">
+<h2>8. String Manipulation and Mathematical Operations</h2>
+
+<h3>8.1 Strings</h3>
+<p>A string is a sequence of characters used to represent text. Strings can be written using single quotes, double quotes or backticks.</p>
+
+<pre><code>let message = "Hello JavaScript";
+
+console.log(message.length);
+console.log(message.toUpperCase());
+console.log(message.toLowerCase());
+console.log(message.includes("JavaScript"));
+console.log(message.slice(0, 5));</code></pre>
+
+<h3>8.2 String Concatenation</h3>
+<p>Concatenation means joining two or more strings using the + operator.</p>
+<pre><code>let first = "Hello";
+let second = "Student";
+
+let result = first + " " + second;
+console.log(result);</code></pre>
+
+<h3>8.3 Template Literals</h3>
+<p>Template literals use backticks and allow variables to be inserted using ${}.</p>
+<pre><code>let name = "Aman";
+
+console.log(`Welcome ${name}`);</code></pre>
+
+<h3>8.4 Mathematical Operations</h3>
+<p>JavaScript provides the Math object for performing common mathematical operations.</p>
+<pre><code>console.log(Math.round(4.6));
+console.log(Math.floor(4.9));
+console.log(Math.ceil(4.1));
+console.log(Math.sqrt(25));
+console.log(Math.pow(2, 3));
+console.log(Math.max(10, 20, 30));
+console.log(Math.min(10, 20, 30));</code></pre>
+</section>
+
+<section class="card">
+<h2>9. Type Conversion and Comments</h2>
+
+<h3>9.1 Type Conversion</h3>
+<p>Type conversion means changing a value from one data type to another.</p>
+
+<h3>9.2 Explicit Conversion</h3>
+<p>Explicit conversion is performed by the programmer using conversion functions.</p>
+<pre><code>let num = Number("25");
+let text = String(100);
+let value = Boolean(1);
+
+console.log(num);
+console.log(text);
+console.log(value);</code></pre>
+
+<h3>9.3 Implicit Conversion</h3>
+<p>Implicit conversion happens automatically when JavaScript converts a value to another type during an operation.</p>
+<pre><code>console.log("5" + 2);
+console.log("5" - 2);</code></pre>
+
+<h3>9.4 JavaScript Comments</h3>
+<p>Comments explain code and are ignored during execution.</p>
+<pre><code>// Single-line comment
+
+/*
+Multi-line
+comment
+*/</code></pre>
+</section>
+
+<section class="card">
+<h2>10. Introduction to DOM</h2>
+
+<h3>10.1 What is DOM?</h3>
+<p>DOM stands for Document Object Model. It represents an HTML document as a tree of objects. JavaScript uses the DOM to access and modify webpage elements.</p>
+
+<h3>10.2 DOM Tree</h3>
+<p>The DOM tree represents the hierarchical structure of an HTML document. Each HTML element is represented as a node.</p>
+
+<h3>10.3 Selecting Elements</h3>
+<p>JavaScript provides different methods for selecting HTML elements.</p>
+
+<pre><code>// Select element by ID
+document.getElementById("demo");
+
+// Select using a CSS selector
+document.querySelector(".box");
+
+// Select all matching CSS selectors
+document.querySelectorAll("p");</code></pre>
+
+<h3>10.4 Modifying Content</h3>
+<p>JavaScript can change the text or HTML content of an element.</p>
+<pre><code>document.getElementById("demo").textContent =
+"Updated Text";
+
+document.getElementById("demo").innerHTML =
+"&lt;b&gt;Bold Text&lt;/b&gt;";</code></pre>
+
+<h3>10.5 Modifying Attributes</h3>
+<p>Attributes provide additional information about HTML elements. JavaScript can change them using setAttribute().</p>
+<pre><code>document.getElementById("photo")
+.setAttribute("alt", "Student Photo");</code></pre>
+
+<h3>10.6 Creating and Removing Elements</h3>
+<pre><code>let para = document.createElement("p");
+
+para.textContent = "New Paragraph";
+
+document.body.appendChild(para);
+
+// Remove the element
+para.remove();</code></pre>
+</section>
+
+<section class="card">
+<h2>11. JavaScript Events and Event Handling</h2>
+
+<h3>11.1 What is an Event?</h3>
+<p>An event is an action or occurrence detected by the browser, such as clicking a button, pressing a key or submitting a form.</p>
+
+<h3>11.2 Common JavaScript Events</h3>
+<ul>
+<li><b>click:</b> When an element is clicked.</li>
+<li><b>mouseover:</b> When the mouse pointer enters an element.</li>
+<li><b>mouseout:</b> When the mouse pointer leaves an element.</li>
+<li><b>keydown:</b> When a keyboard key is pressed.</li>
+<li><b>input:</b> When the value of an input changes.</li>
+<li><b>change:</b> When an input value is changed and committed.</li>
+<li><b>submit:</b> When a form is submitted.</li>
+</ul>
+
+<h3>11.3 Event Handling Using HTML</h3>
+<pre><code>&lt;button onclick="alert('Hello')"&gt;
+Click Me
+&lt;/button&gt;</code></pre>
+
+<h3>11.4 Event Listeners</h3>
+<p>The addEventListener() method attaches an event handler to an element without placing the event code directly inside the HTML tag.</p>
+<pre><code>document.getElementById("btn")
+.addEventListener("click", function() {
+    alert("Button clicked");
+});</code></pre>
+
+<h3>11.5 Event Propagation</h3>
+<p>Event propagation describes how an event travels through elements in the DOM tree.</p>
+<ul>
+<li><b>Capturing:</b> The event travels from outer elements towards the target element.</li>
+<li><b>Bubbling:</b> The event travels from the target element towards outer elements. Bubbling is the default behaviour for many events.</li>
+</ul>
+
+<h3>11.6 Event Propagation Example</h3>
+<pre><code>document.getElementById("parent")
+.addEventListener("click", function() {
+    console.log("Parent clicked");
+});
+
+document.getElementById("child")
+.addEventListener("click", function() {
+    console.log("Child clicked");
+});</code></pre>
+</section>
+
+<section class="card">
+<h2>12. Form Validation</h2>
+
+<h3>12.1 What is Form Validation?</h3>
+<p>Form validation is the process of checking user input before accepting or submitting form data. It helps ensure that the entered information follows required rules.</p>
+
+<h3>12.2 Types of Validation</h3>
+<ul>
+<li><b>HTML validation:</b> Uses attributes such as required, minlength, maxlength and type.</li>
+<li><b>JavaScript validation:</b> Uses scripts to check user input and display custom messages.</li>
+</ul>
+
+<h3>12.3 HTML Form Validation Example</h3>
+<pre><code>&lt;form&gt;
+    &lt;input type="email" required
+           placeholder="Enter email"&gt;
+
+    &lt;input type="password" required
+           minlength="6"
+           placeholder="Password"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>12.4 JavaScript Form Validation Example</h3>
+<pre><code>&lt;form id="myForm"&gt;
+    &lt;input id="username" type="text"
+           placeholder="Enter name"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+document.getElementById("myForm")
+.addEventListener("submit", function(event) {
+
+    let name = document.getElementById("username").value;
+
+    if (name.trim() === "") {
+        event.preventDefault();
+        alert("Please enter your name");
+    }
+});
+&lt;/script&gt;</code></pre>
+<p>The preventDefault() method stops the form's normal submission when the name is empty.</p>
+</section>
+
+<section class="card">
+<h2>13. Dynamic Content Updates</h2>
+
+<h3>13.1 Meaning</h3>
+<p>Dynamic content updates allow webpage information to change in response to user actions or program instructions without reloading the complete page.</p>
+
+<h3>13.2 Example</h3>
+<pre><code>&lt;p id="result"&gt;Original Text&lt;/p&gt;
+
+&lt;button id="update"&gt;Update Text&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("update")
+.addEventListener("click", function() {
+
+    document.getElementById("result").textContent =
+    "Content Updated Successfully";
+
+});
+&lt;/script&gt;</code></pre>
+
+<h3>13.3 Applications</h3>
+<ul>
+<li>Live search results.</li>
+<li>Instant form feedback.</li>
+<li>Interactive dashboards.</li>
+<li>Dynamic notifications.</li>
+<li>Updating information on a webpage.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>14. Important Exam Questions</h2>
+
+<h3>Short Answer Questions</h3>
+<ol>
+<li>Define JavaScript.</li>
+<li>What are variables?</li>
+<li>List JavaScript data types.</li>
+<li>What are operators?</li>
+<li>Differentiate between == and ===.</li>
+<li>What is a function?</li>
+<li>Define an array and an object.</li>
+<li>What is type conversion?</li>
+<li>Define DOM.</li>
+<li>What is event handling?</li>
+<li>What is event propagation?</li>
+<li>Define form validation.</li>
+</ol>
+
+<h3>Long Answer Questions</h3>
+<ol>
+<li>Explain JavaScript features and its uses.</li>
+<li>Explain variables and data types with examples.</li>
+<li>Explain operators and expressions.</li>
+<li>Explain if-else and switch statements.</li>
+<li>Explain for, while and do-while loops.</li>
+<li>Explain functions and scope.</li>
+<li>Explain arrays and objects with examples.</li>
+<li>Explain string manipulation and Math operations.</li>
+<li>Explain DOM manipulation and element selection.</li>
+<li>Explain JavaScript events and event propagation.</li>
+<li>Explain form validation with an example.</li>
+</ol>
+</section>
+
+</main>
+</body>
+</html>
